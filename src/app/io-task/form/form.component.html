@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-body">
+        <h3>Student Form</h3>
+        <form [formGroup]="stdForm" (ngSubmit)="onSubmite()">
+            <div class="form-group">
+                <label for="fname">Fname *</label>
+                <input type="text" formControlName="fname" class="form-control" />
+
+                <strong class="text-danger"
+                    *ngIf="stdForm.get('fname')?.touched && stdForm.get('fname')?.hasError('required')">
+                    Username is a required field.
+                </strong>
+            </div>
+            <div class="form-group">
+                <label for="lname">Lname *</label>
+                <input type="text" formControlName="lname" class="form-control">
+
+                 <strong class="text-danger"
+                    *ngIf="stdForm.get('lname')?.touched && stdForm.get('lname')?.hasError('required')">
+                    Username is a required field.
+                </strong>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="text" formControlName="email" class="form-control">
+
+                 <strong class="text-danger"
+                    *ngIf="stdForm.get('email')?.touched && stdForm.get('email')?.hasError('required')">
+                    Username is a required field.
+                </strong>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact *</label>
+                <input type="text" formControlName="contact" class="form-control">
+
+                 <strong class="text-danger"
+                    *ngIf="stdForm.get('contact')?.touched && stdForm.get('contact')?.hasError('required')">
+                    Username is a required field.
+                </strong>
+            </div>
+
+             <button mat-raised-button color="primary">Submit</button>
+        </form>
+    </div>
+</div>

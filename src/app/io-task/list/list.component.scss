@@ -1,0 +1,12 @@
+.table-wrapper {
+  max-width: 550px;   /* jitni height chahiye utni de do */
+  overflow-x: auto;    /* vertical scroll */
+  display: block;      /* IMPORTANT */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+

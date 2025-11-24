@@ -39,7 +39,8 @@
                 </strong>
             </div>
 
-             <button mat-raised-button color="primary">Submit</button>
+             <button mat-raised-button color="primary" type="submit" *ngIf="!editedMode">Submit</button>
+             <button mat-raised-button *ngIf="editedMode" color="primary" type="button" (click)="onUpdate()">Update</button>
         </form>
     </div>
 </div>

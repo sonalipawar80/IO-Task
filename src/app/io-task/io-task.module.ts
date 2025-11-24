@@ -6,7 +6,7 @@ import { ListComponent } from './list/list.component';
 import { log } from 'console';
 import { IOTaskRoutingModule } from './io-task-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -21,15 +21,20 @@ import {MatButtonModule} from '@angular/material/button';
     IOTaskRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MaterialModule
 
   ],
+  exports:[
+    FormComponent,
+    ListComponent
+  ],
+
   providers:[]
 })
 export class IOTaskModule { 
 
   constructor(){
-    console.log('io module load')
+    // console.log('io module load')
   }
   
 }

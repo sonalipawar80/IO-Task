@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container my-4">
     <div class="row">
         <div class="col-6">
-            <app-form (emitstdobj)="getnewstd($event)"></app-form>
+            <app-form (emitstdobj)="getnewstd($event)" [editedObj]="editObj" (updatedObj)="updateValue($event)"></app-form>
         </div>
         <div class="col-6">
-            <app-list [stdDataInput]="students"></app-list>
+            <app-list [stdDataInput]="students" (editedId)="getEditId($event)" (RemoveId)="onRemoved($event)" ></app-list>
         </div>
     </div>
 </div>

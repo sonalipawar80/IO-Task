@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Air Line Booking</h2>
+            <app-passenger-count></app-passenger-count>
+            <ul class="list-group my-4"*ngFor="let pass of passengerData">
+                <li class="list-group-item" >
+                    {{pass.fullname}}
+                </li>
+            </ul>
+            <app-passenger-card [passData]="passengerData"></app-passenger-card>
+        </div>
+    </div>
+</div>

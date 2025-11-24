@@ -1,4 +1,4 @@
-export interface IStd {
+export interface IStdServ {
   fname: string;
   lname: string;
   email: string;

@@ -1,0 +1,39 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "fname": "Sonali",
+      "lname": "Pawar",
+      "email": "sonalipawar8079@gmail.com",
+      "contact": "9370540080"
+    },
+    {
+      "id": "4",
+      "fname": "Amit",
+      "lname": "Kumar",
+      "email": "amitkumar45@gmail.com",
+      "contact": "9123456789"
+    },
+    {
+      "id": "5",
+      "fname": "Sneha",
+      "lname": "Deshmukh",
+      "email": "snehadeshmukh98@gmail.com",
+      "contact": "9876501234"
+    },
+    {
+      "id": "c037",
+      "fname": "Sona",
+      "lname": "Pawar",
+      "email": "sonalipawar8079@gmail.com",
+      "contact": "9785641235"
+    },
+    {
+      "id": "d4b5",
+      "fname": "Sonali",
+      "lname": "Pawar",
+      "email": "sonalipawar8079@gmail.com",
+      "contact": "7589641275"
+    }
+  ]
+}

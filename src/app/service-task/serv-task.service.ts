@@ -4,12 +4,13 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { IStd } from '../io-task/const';
 import { IStdServ } from './const';
 import { SharedModuleService } from '../shared-module/shared-module.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServTaskService {
-  BASE_URL = 'http://localhost:3000/students'
+  BASE_URL = environment.BASE_URL
 
   private stdSourse = new BehaviorSubject<any>(null);
 

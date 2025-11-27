@@ -17,6 +17,9 @@ const routes: Routes = [
   },{
     path:'passenger-task',
     loadChildren:()=> import('./passanger/passanger.module').then(m=>m.PassangerModule)
+  },{
+    path:'directive-tasks',
+    loadChildren:()=> import('./directive-tasks/directive-tasks.module').then(m=>m.DirectiveTasksModule)
   }
 ];
 

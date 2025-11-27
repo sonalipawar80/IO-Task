@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppDashboardComponent } from './app-dashboard/app-dashboard.component';
 import {HttpClientModule} from '@angular/common/http'
 import { MaterialModule } from './material/material.module';
+import { DirectiveTasksModule } from './directive-tasks/directive-tasks.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,7 @@ import { MaterialModule } from './material/material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

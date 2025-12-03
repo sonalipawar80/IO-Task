@@ -1,0 +1,77 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="dark-color p-4 m-0">EXamples of summary Letter and Word</h2>
+            <p class="alert my-2 p-4">
+                <strong class="text-primary">Non-Summaries Paragraph</strong>
+                {{title1}}
+            </p>
+            <p class="alert my-2 p-4">
+                <strong class="text-primary">Summaries with Charecter </strong>
+                {{title1 | summary : 50}}
+            </p>
+            <p class="alert my-2 p-4">
+                <strong class="text-primary">Summaries with word</strong>
+                {{title1 | summaryWord : 50}}
+            </p>
+        </div>
+        <div class="col-md-12">
+            <h2 class="dark-color p-4 m-0">Examples of Filter Pipes</h2>
+            <div class="card my-2">
+                <div class="card-body">
+
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search...." class="form-control"
+                                    [(ngModel)]="searchVal">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select name="filterbyVal" id="filterVal" class="form-control" [(ngModel)]="filterbyVal"
+                                    (change)="interFormReset()">
+                                    <option value="name">By Name</option>
+                                    <option value="team">By Team Name</option>
+                                    <option value="odiRuns"> By OdiRuns</option>
+                                    <option value="testRuns">BY TeastRuns</option>
+                                    <option value="yearDebut">By YearDebut</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Sr No.</th>
+                                <th>Name</th>
+                                <th>Team</th>
+                                <th>Odi Runs</th>
+                                <th>Test Runs</th>
+                                <th>YearDebut</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let play of PlayerData | filterPipe: searchVal : filterbyVal; let i=index">
+                                <td>{{i+1}}</td>
+                                <td>{{play.name}}</td>
+                                <td>{{play.team}}</td>
+                                <td>{{play.odiRuns}}</td>
+                                <td>{{play.testRuns}}</td>
+                                <td>{{play.yearDebut}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="Posts$ |async as postInfo" >
+            <div class="col-12">
+                <h2 class="dark-color p-4 m-0">Examples of Async Pipes</h2>
+            </div>
+                    <div class="col-md-4" *ngFor="let post of postInfo" >
+                        <app-post-card [postObj]="post"></app-post-card>
+                    </div>
+                </div>
+            </div>
+</div>

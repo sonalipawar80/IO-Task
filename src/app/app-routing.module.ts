@@ -20,6 +20,18 @@ const routes: Routes = [
   },{
     path:'directive-tasks',
     loadChildren:()=> import('./directive-tasks/directive-tasks.module').then(m=>m.DirectiveTasksModule)
+  },{
+    path:'ng-content',
+    loadChildren:()=>import('./ng-content/ng-content.module').then(m=>m.NgContentModule)
+  },{
+    path:'flatting-operator',
+    loadChildren:()=>import('./flattning-operator/flattning-operator.module').then(m=>m.FlattningOperatorModule)
+  },{
+    path:'pipe-task',
+    loadChildren:()=>import('./pipe-task/pipe-task.module').then(m=>m.PipeTaskModule)
+  },{
+    path:'form-task',
+    loadChildren:()=>import('./template-form/template-form.module').then(m=>m.TemplateFormModule)
   }
 ];
 

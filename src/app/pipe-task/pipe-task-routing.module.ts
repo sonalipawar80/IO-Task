@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DirectiveDashboardComponent } from './components/directive-dashboard/directive-dashboard.component';
+import { PipeDashboardComponent } from './components/pipe-dashboard/pipe-dashboard.component';
+
 const routes: Routes = [
   {
     path:'',
-    component:DirectiveDashboardComponent
-
+    component:PipeDashboardComponent
   }
 ];
 
@@ -13,6 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DirectiveTasksRoutingModule { 
-
-}
+export class PipeTaskRoutingModule { }

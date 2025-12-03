@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="row" >
+        <div class="col-4 my-3" *ngFor="let product of productDataWithReview">
+            <div class="card productCard h-100 ">
+                <div class="card-header">
+                       {{product.title}}
+                </div>
+                <div class="card-body">
+                     <img [src]="product.image" [alt]="product.title" class="img-fluid" >
+                </div>
+                <div class="card-footer">
+                    <button type="button" mat-raised-button color="primary"> Edit</button>
+                    <button type="button" mat-raised-button color="warn"> Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+    </div>
+</div> -->
+
+

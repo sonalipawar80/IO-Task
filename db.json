@@ -1,39 +1,190 @@
 {
-  "students": [
-    {
-      "id": "1",
-      "fname": "Sona",
-      "lname": "Pawar",
-      "email": "sonalipawar8079@gmail.com",
-      "contact": "9370540080"
-    },
-    {
-      "id": "4",
-      "fname": "Amit",
-      "lname": "Kumar",
-      "email": "amitkumar45@gmail.com",
-      "contact": "9123456789"
-    },
-    {
-      "id": "5",
-      "fname": "Sneha",
-      "lname": "Deshmukh",
-      "email": "snehadeshmukh98@gmail.com",
-      "contact": "9876501234"
-    },
-    {
-      "id": "c037",
-      "fname": "Sona",
-      "lname": "Pawar",
-      "email": "sonalipawar8079@gmail.com",
-      "contact": "9785641235"
-    },
-    {
-      "id": "d4b5",
-      "fname": "Sonali",
-      "lname": "Pawar",
-      "email": "sonalipawar8079@gmail.com",
-      "contact": "7589641275"
-    }
-  ]
+    "students": [
+        {
+            "id": "1",
+            "fname": "Sona",
+            "lname": "Pawar",
+            "email": "sonalipawar8079@gmail.com",
+            "contact": "9370540080"
+        },
+        {
+            "id": "4",
+            "fname": "Amit",
+            "lname": "Kumar",
+            "email": "amitkumar45@gmail.com",
+            "contact": "9123456789"
+        },
+        {
+            "id": "5",
+            "fname": "Sneha",
+            "lname": "Deshmukh",
+            "email": "snehadeshmukh98@gmail.com",
+            "contact": "9876501234"
+        },
+        {
+            "id": "c037",
+            "fname": "Sona",
+            "lname": "Pawar",
+            "email": "sonalipawar8079@gmail.com",
+            "contact": "9785641235"
+        },
+        {
+            "id": "d4b5",
+            "fname": "Sonali",
+            "lname": "Pawar",
+            "email": "sonalipawar8079@gmail.com",
+            "contact": "7589641275"
+        }
+    ],
+    "cricketer": [
+        {
+            "name": "Virat Kohli",
+            "team": "India",
+            "odiRuns": 13848,
+            "testRuns": 8848,
+            "yearDebut": 2008
+        },
+        {
+            "name": "Rohit Sharma",
+            "team": "India",
+            "odiRuns": 10709,
+            "testRuns": 4137,
+            "yearDebut": 2007
+        },
+        {
+            "name": "Babar Azam",
+            "team": "Pakistan",
+            "odiRuns": 5729,
+            "testRuns": 3898,
+            "yearDebut": 2015
+        },
+        {
+            "name": "Joe Root",
+            "team": "England",
+            "odiRuns": 6528,
+            "testRuns": 11516,
+            "yearDebut": 2012
+        },
+        {
+            "name": "Kane Williamson",
+            "team": "New Zealand",
+            "odiRuns": 6556,
+            "testRuns": 8743,
+            "yearDebut": 2010
+        },
+        {
+            "name": "David Warner",
+            "team": "Australia",
+            "odiRuns": 6932,
+            "testRuns": 8786,
+            "yearDebut": 2009
+        },
+        {
+            "name": "Steve Smith",
+            "team": "Australia",
+            "odiRuns": 4935,
+            "testRuns": 9665,
+            "yearDebut": 2010
+        },
+        {
+            "name": "Shakib Al Hasan",
+            "team": "Bangladesh",
+            "odiRuns": 7730,
+            "testRuns": 4454,
+            "yearDebut": 2006
+        },
+        {
+            "name": "Ben Stokes",
+            "team": "England",
+            "odiRuns": 3159,
+            "testRuns": 6217,
+            "yearDebut": 2011
+        },
+        {
+            "name": "Hardik Pandya",
+            "team": "India",
+            "odiRuns": 1769,
+            "testRuns": 532,
+            "yearDebut": 2016
+        },
+        {
+            "name": "Faf du Plessis",
+            "team": "South Africa",
+            "odiRuns": 5507,
+            "testRuns": 4163,
+            "yearDebut": 2011
+        },
+        {
+            "name": "Quinton de Kock",
+            "team": "South Africa",
+            "odiRuns": 6770,
+            "testRuns": 3300,
+            "yearDebut": 2013
+        },
+        {
+            "name": "Shaheen Afridi",
+            "team": "Pakistan",
+            "odiRuns": 202,
+            "testRuns": 297,
+            "yearDebut": 2018
+        },
+        {
+            "name": "Travis Head",
+            "team": "Australia",
+            "odiRuns": 2521,
+            "testRuns": 2059,
+            "yearDebut": 2016
+        },
+        {
+            "name": "Shubman Gill",
+            "team": "India",
+            "odiRuns": 2271,
+            "testRuns": 1343,
+            "yearDebut": 2019
+        }
+    ],
+    "Posts": [
+        {
+            "userId": 1,
+            "id": 1,
+            "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+            "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        },
+        {
+            "userId": 1,
+            "id": 2,
+            "title": "qui est esse",
+            "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+        },
+        {
+            "userId": 1,
+            "id": 3,
+            "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+            "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+        },
+        {
+            "userId": 1,
+            "id": 4,
+            "title": "eum et est occaecati",
+            "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+        },
+        {
+            "userId": 1,
+            "id": 5,
+            "title": "nesciunt quas odio",
+            "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+        },
+        {
+            "userId": 1,
+            "id": 6,
+            "title": "dolorem eum magni eos aperiam quia",
+            "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+        },
+        {
+            "userId": 1,
+            "id": 7,
+            "title": "magnam facilis autem",
+            "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+        }
+    ]
 }

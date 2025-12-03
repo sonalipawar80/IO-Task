@@ -9,6 +9,13 @@ import { DirectiveDashboardComponent } from './components/directive-dashboard/di
 import { HighlightDirective } from './directives/highlight.directive';
 import { ToLowerCaseDirective } from './directives/to-lower-case.directive';
 import { CraditCardDirective } from './directives/cradit-card.directive';
+import { MatButtonModule } from "@angular/material/button";
+import { HighligherMrComponent } from './machinetest-components/highligher-mr/highligher-mr.component';
+import { LowercaseMrComponent } from './machinetest-components/lowercase-mr/lowercase-mr.component';
+import { CreditcardMrComponent } from './machinetest-components/creditcard-mr/creditcard-mr.component';
+import { HighligherMrDirective } from './machinetestDirectives/highligher-mr.directive';
+import { LowercaseMrDirective } from './machinetestDirectives/lowercase-mr.directive';
+import { CreditcardMrDirective } from './machinetestDirectives/creditcard-mr.directive';
 
 
 @NgModule({
@@ -19,11 +26,19 @@ import { CraditCardDirective } from './directives/cradit-card.directive';
     DirectiveDashboardComponent,
     HighlightDirective,
     ToLowerCaseDirective,
-    CraditCardDirective
+    CraditCardDirective,
+    LowercaseMrComponent,
+    CreditcardMrComponent,
+    HighligherMrDirective,
+    LowercaseMrDirective,
+    CreditcardMrDirective,
+    HighligherMrComponent
+
   ],
   imports: [
     CommonModule,
-    DirectiveTasksRoutingModule
-  ]
+    DirectiveTasksRoutingModule,
+    MatButtonModule
+]
 })
 export class DirectiveTasksModule { }

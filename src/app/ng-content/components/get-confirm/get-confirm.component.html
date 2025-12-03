@@ -1,0 +1,12 @@
+<div (click)="closemodal(false)" class="confirm-backdrop" *ngIf="show">
+
+    <div class="card" (click)="$event.stopPropagation()">
+    <div class="card-body">
+         <ng-content select="h2"></ng-content>
+    </div>
+    <div class="card-footer">
+        <button type="button" mat-raised-button color="primary" (click)="closemodal(false)">Cancel</button>
+        <button type="button" mat-raised-button color="primary" (click)="closemodal(true)">confirm</button>
+    </div>
+</div>
+</div>

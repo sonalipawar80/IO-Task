@@ -5,3 +5,8 @@ export interface IStdServ {
   contact: number;
   id:string
 }
+
+export interface Itodo {
+    id: string,
+    title: string
+}

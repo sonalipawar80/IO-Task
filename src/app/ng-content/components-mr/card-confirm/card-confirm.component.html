@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header">
+        Angular......
+    </div>
+    <div class="card-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ullam sed est obcaecati. Quidem quos aperiam
+        suscipit sapiente rerum tenetur!\
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+        <button type="button" mat-raised-button color="primary">Edit</button>
+        <button type="button" mat-raised-button color="warn" (click)="onremove()">Remove</button>
+    </div>
+</div>
+
+<app-get-confirm-mr [showbackdrop]="show"  (emitshowflag)="onFlagChange($event)">
+    <h2 class="note">Are you sure want to delete this post....</h2>
+</app-get-confirm-mr>

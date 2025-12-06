@@ -1,0 +1,36 @@
+<h2 class="alert alert-color text-center">ng-content Card</h2>
+<div class="container">
+    <div class="row ">
+        <div class="col-md-4 my-4" *ngFor="let data of arr">
+            <app-card>
+                <h2>{{data.title}}</h2>
+                <p>
+                    {{data.body}}
+                </p>
+            </app-card>
+        </div>
+    </div>
+</div>
+<h2 class="alert alert-color text-center">ng-content sign-up / Log-In</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <app-sign-up>
+                <h2 class="singupheading">Sing-Up Form</h2>
+            </app-sign-up>
+        </div>
+        <div class="col-md-6">
+            <app-log-in>
+                <h2 class="loginheading">Log-In Form</h2>
+            </app-log-in>
+        </div>
+    </div>
+</div>
+<h2 class="alert alert-color text-center">SnackBar</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <app-card-confirm></app-card-confirm>
+        </div>
+    </div>
+</div>

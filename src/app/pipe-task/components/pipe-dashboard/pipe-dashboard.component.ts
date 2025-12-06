@@ -25,6 +25,24 @@ filterbyVal:string='team';
 POST_URL:string='http://localhost:3000/Posts';
 PostData!:Ipost[];
 Posts$!:Observable<Ipost[]>;
+// ------------------
+data=[
+  {
+    fileName:'gsjdhggsdhkjsdhhsddhsks',
+    type:'word',
+    size:748546941
+  },
+    {
+    fileName:'gsjdhggsdhkjsdhhsddhsks',
+    type:'excel',
+    size:748546941
+  },
+    {
+    fileName:'gsjdhggsdhkjsdhhsddhsks',
+    type:'pdf',
+    size:748546941
+  }
+]
   constructor(
     private _http:HttpClient
   ) { }

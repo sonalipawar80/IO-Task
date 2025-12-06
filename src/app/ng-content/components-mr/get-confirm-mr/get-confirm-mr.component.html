@@ -1,0 +1,11 @@
+<div class="backDrop-css" *ngIf="showbackdrop" (click)="onclickres(false)">
+    <div class="card">
+        <div class="card-body">
+            <ng-content select=".note"></ng-content>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <button type="button" mat-raised-button color="primary" (click)="onclickres(false)">cancel</button>
+            <button type="button" mat-raised-button color="warn" (click)="onclickres(true)">Remove</button>
+        </div>
+    </div>
+</div>

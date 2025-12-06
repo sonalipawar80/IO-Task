@@ -10,6 +10,7 @@ import { SummaryPipe } from './Pipes/summary.pipe';
 import { SummaryWordPipe } from './Pipes/summary-word.pipe';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { MatButtonModule } from "@angular/material/button";
+import { FilesizePipe } from './Pipes/filesize.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MatButtonModule } from "@angular/material/button";
     FilterPipePipe,
     SummaryPipe,
     SummaryWordPipe,
-    PostCardComponent
+    PostCardComponent,
+    FilesizePipe
   ],
   imports: [
     CommonModule,

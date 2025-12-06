@@ -10,11 +10,14 @@ import { ServFormComponent } from './serv-form/serv-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
+import { TodoserviceTaskComponent } from './components/todoservice-task/todoservice-task.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
     ServDashboardComponent,
-    ServFormComponent
+    ServFormComponent,
+    TodoserviceTaskComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +26,9 @@ import { SharedModuleModule } from '../shared-module/shared-module.module';
     ReactiveFormsModule,
     FormsModule,
     MaterialModule,
-    SharedModuleModule
+    SharedModuleModule,
+    HttpClientModule,
+    ReactiveFormsModule
     
     
 ]

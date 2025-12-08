@@ -1,23 +1,22 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { IStdServ } from '../const';
+import { Player } from '../../const';
 import { SharedModuleService } from 'src/app/shared-module/shared-module.service';
-import { ServiceTaskModule } from '../service-task.module';
-import { ServTaskService } from '../services/serv-task.service';
+import { CricketerservService } from '../cricketerserv.service';
 
 @Component({
-  selector: 'app-serv-form',
-  templateUrl: './serv-form.component.html',
-  styleUrls: ['./serv-form.component.scss']
+  selector: 'app-cricketerdashboard',
+  templateUrl: './cricketerdashboard.component.html',
+  styleUrls: ['./cricketerdashboard.component.scss']
 })
-export class ServFormComponent implements OnInit {
-  stdForm!: FormGroup;
+export class CricketerdashboardComponent implements OnInit {
+stdForm!: FormGroup;
   isEditMode: Boolean = false;
-  editData!: IStdServ
-  stdDataInput!: IStdServ[]
+  editData!: Player
+  stdDataInput!: Player[]
   constructor(private fb: FormBuilder,
     private _shareMatDialog: SharedModuleService,
-    private _stdServ:ServTaskService
+    private _playerserv:CricketerservService
   ) { }
 
   ngOnInit(): void {
@@ -30,7 +29,7 @@ export class ServFormComponent implements OnInit {
       if (!this.isEditMode) {
         console.log(this.stdForm.value)
         let value = this.stdForm.value;
-        this._stdServ.postData(value).subscribe({
+        this._playerserv.postData(value).subscribe({
           next: () => {
             this.stdForm.reset()
             console.log('submit', value)
@@ -42,7 +41,8 @@ export class ServFormComponent implements OnInit {
         })
       } else {
         let value = this.stdForm.value;
-        this._stdServ.updateData(this.editData.id, value).subscribe({
+        this.isEditMode=false
+        this._playerserv.updateData(this.editData.id, value).subscribe({
           next: (res: any) => {
             console.log('updated ho gaya hai', res)
             this.getStdData()
@@ -55,22 +55,17 @@ export class ServFormComponent implements OnInit {
 
   formCreate() {
     this.stdForm = this.fb.group({
-      fname: ['', [Validators.required]],
-      lname: ['', [Validators.required]],
-      email: ['', [Validators.required]],
-       contact: ['', [
-      Validators.required,
-      Validators.minLength(10),
-      Validators.maxLength(10)
-    ]],
+      name: ['', [Validators.required]],
+      team: ['', [Validators.required]],
+      role: ['', [Validators.required]]
     })
   }
   
   // -------------------------List Section--------------
   getStdData() {
-    this._stdServ.fetchAllData()
+    this._playerserv.fetchAllData()
       .subscribe({
-        next: (res: IStdServ[]) => {
+        next: (res: Player[]) => {
           this.stdDataInput = res;
           console.log('fetch', res)
         }
@@ -78,9 +73,9 @@ export class ServFormComponent implements OnInit {
   }
 
 
-  onclickEdit(stdData: string) {
-    this._stdServ.getSingleStd(stdData).subscribe({
-      next: (res: IStdServ) => {
+  onclickEdit(stdData: number) {
+    this._playerserv.getSingleStd(stdData).subscribe({
+      next: (res: Player) => {
         // console.log('here are get Data single',res)
         this.stdForm.patchValue(res)
         this.isEditMode = true
@@ -90,15 +85,15 @@ export class ServFormComponent implements OnInit {
 
   }
 
-  onclickRemove(stdId: string) {
+  onclickRemove(stdId: number) {
     this._shareMatDialog.confirm('Are you sure, want to delete the Student')
       .subscribe((res: Boolean) => {
         console.log('afterCloseres:', res)
         if (res) {
-          this._stdServ.removeData(stdId).subscribe((res: any) => {
+          this._playerserv.removeData(stdId).subscribe((res: any) => {
             this.getStdData()
           })
         }
       })
     }
-  }
+}

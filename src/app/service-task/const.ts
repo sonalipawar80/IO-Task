@@ -10,3 +10,10 @@ export interface Itodo {
     id: string,
     title: string
 }
+
+export interface Player {
+  id: number;
+  name: string;
+  team: string;
+  role: string;
+}

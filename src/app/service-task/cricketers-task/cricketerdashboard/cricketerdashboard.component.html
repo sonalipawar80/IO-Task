@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Cricketer Form</h3>
+                    <form [formGroup]="stdForm" (ngSubmit)="onSubmite()">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" formControlName="name" class="form-control" />
+
+                            <strong class="text-danger"
+                                *ngIf="stdForm.get('name')?.touched && stdForm.get('name')?.hasError('required')">
+                                Username is a required field.
+                            </strong>
+                        </div>
+                        <div class="form-group">
+                            <label for="team">Team *</label>
+                            <input type="text" formControlName="team" class="form-control">
+
+                            <strong class="text-danger"
+                                *ngIf="stdForm.get('team')?.touched && stdForm.get('team')?.hasError('required')">
+                                Username is a required field.
+                            </strong>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Role *</label>
+                            <input type="text" formControlName="role" class="form-control">
+
+                            <strong class="text-danger"
+                                *ngIf="stdForm.get('role')?.touched && stdForm.get('role')?.hasError('required')">
+                                Username is a required field.
+                            </strong>
+                        </div>
+
+                        <button mat-raised-button color="primary">{{isEditMode?'Update':'Submite'}}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <table class="table table-borderd">
+                <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>First Name</th>
+                        <th>team Name</th>
+                        <th>role</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let std of stdDataInput; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{std.name}}</td>
+                        <td>{{std.team}}</td>
+                        <td>{{std.role}}</td>
+                        <td> <button mat-icon-button color="primary" aria-label="Edit" (click)="onclickEdit(std.id)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                        </td>
+                        <td><button mat-icon-button color="warn" aria-label="Delete" (click)="onclickRemove(std.id)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -11,13 +11,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
 import { TodoserviceTaskComponent } from './components/todoservice-task/todoservice-task.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { CricketerdashboardComponent } from './cricketers-task/cricketerdashboard/cricketerdashboard.component';
+import { GallaryDashboardComponent } from './Gallary-task/gallary-dashboard/gallary-dashboard.component'
 
 @NgModule({
   declarations: [
     ServDashboardComponent,
     ServFormComponent,
-    TodoserviceTaskComponent
+    TodoserviceTaskComponent,
+    CricketerdashboardComponent,
+    GallaryDashboardComponent
   ],
   imports: [
     CommonModule,

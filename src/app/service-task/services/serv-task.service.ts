@@ -1,16 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { IStd } from '../io-task/const';
-import { IStdServ } from './const';
-import { SharedModuleService } from '../shared-module/shared-module.service';
 import { environment } from 'src/environments/environment';
+import { IStdServ } from '../const';
+import { SharedModuleService } from 'src/app/shared-module/shared-module.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServTaskService {
-  BASE_URL = environment.BASE_URL
+  BASE_URL ='https://service-task-backend.onrender.com/students'
 
   private stdSourse = new BehaviorSubject<any>(null);
 

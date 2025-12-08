@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { TodoServiceService } from '../../services/todo-service.service';
 import { Ipost } from 'src/app/pipe-task/const';
 import { Itodo } from '../../const';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-todoservice-task',
@@ -9,8 +10,8 @@ import { Itodo } from '../../const';
   styleUrls: ['./todoservice-task.component.scss']
 })
 export class TodoserviceTaskComponent implements OnInit {
+ @ViewChild('todoForm') todoForm!: NgForm;
   todoData!: Itodo[];
-  todoForm!: string;
   editMode: boolean = false;
   editedId!: string;
   constructor(
@@ -23,34 +24,43 @@ export class TodoserviceTaskComponent implements OnInit {
     })
   }
 
-  onadd() {
-    if (this.todoForm.length > 0) {
-      if (!this.editMode) {
-        console.log('not add mode')
-        console.log(this.todoForm)
-        let newTodo = {
-          id: this.todoserv.uuid(),
-          title: this.todoForm
-        }
-        this.todoForm = ''
-        this.todoserv.addTodo(newTodo);
-      } else {
-
-        let updatedTodo = {
-          id: this.editedId,
-          title: this.todoForm
-        }
-        this.todoserv.update(updatedTodo)
-        this.todoForm = ''
-        console.log(updatedTodo)
-      }
+  onSubmit(){
+    if(this.todoForm.valid){
+      let newTodo={ ...this.todoForm,id:this.todoserv.uuid()}
+      console.log(newTodo)
     }
   }
+update(){
+  
+}
+  // onadd() {
+  //   if (this.todoForm.length > 0) {
+  //     if (!this.editMode) {
+  //       console.log('not add mode')
+  //       console.log(this.todoForm)
+  //       let newTodo = {
+  //         id: this.todoserv.uuid(),
+  //         title: this.todoForm
+  //       }
+  //       this.todoForm = ''
+  //       this.todoserv.addTodo(newTodo);
+  //     } else {
+
+  //       let updatedTodo = {
+  //         id: this.editedId,
+  //         title: this.todoForm
+  //       }
+  //       this.todoserv.update(updatedTodo)
+  //       this.todoForm = ''
+  //       console.log(updatedTodo)
+  //     }
+  //   }
+  // }
 
   onedit(editedTod: Itodo) {
     this.editedId = editedTod.id
     this.editMode = true
-    this.todoForm = editedTod.title
+    // this.todoForm = editedTod.title
   }
 
   onremove(todoId:string){

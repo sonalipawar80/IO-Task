@@ -1,25 +1,29 @@
 <div class="container">
     <div class="row my-4">
-                <div class="col-md-12 my-4">
-                    <div class="card">
-                        <div class="card-body d-flex justify-content-between">
-                            <div class="form-group w-100">
-                                <input type="text"  placeholder="Todo....." class="form-control" [(ngModel)]="todoForm">
-                            </div>
-                             <button type="button" class="button" mat-raised-button (click)="onadd()">{{editMode?'Update Todo':'Add Todo'}}</button>
+        <div class="col-md-12 my-4">
+            <div class="card">
+                <div class="card-body ">
+                    <form #todoForm="ngForm" class="d-flex justify-content-between" (ngSubmit)="onSubmit()">
+                        <div class="form-group w-100">
+                            <input type="text" placeholder="Todo....." class="form-control" ngModel>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-12" *ngFor="let todo of todoData">
-                    <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between">
-                            <strong>{{todo.title}}</strong>
-                            <div class="btn">
-                                <button type="button" class="button" mat-raised-button (click)="onedit(todo)">Edit</button>
-                                <button type="button"mat-raised-button color="warn" (click)="onremove(todo.id)">Remove</button>
-                            </div>
-                        </li>
-                    </ul>
+                        <button type="submit" class="submit" mat-raised-button>Add Todo</button>
+                        <button type="submit" class="button" mat-raised-button (click)="update()">Update Todo</button>
+                    </form>
+
                 </div>
             </div>
         </div>
+        <div class="col-md-12" *ngFor="let todo of todoData">
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between">
+                    <strong>{{todo.title}}</strong>
+                    <div class="btn">
+                        <button type="button" class="button" mat-raised-button (click)="onedit(todo)">Edit</button>
+                        <button type="button" mat-raised-button color="warn" (click)="onremove(todo.id)">Remove</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

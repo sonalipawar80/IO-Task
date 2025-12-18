@@ -1,0 +1,45 @@
+ <div class="row my-4" *ngFor="let order of orderdData; trackBy: trackById">
+    <div class="col-12">
+      <mat-card class="border">
+
+        <mat-card-title>
+          Customer Name :- {{ order.customer }}
+        </mat-card-title>
+
+        <mat-card-subtitle>
+          Product Quantity :- {{ order.quantity }}
+        </mat-card-subtitle>
+
+        <mat-card-content>
+          Product Name :- {{ order.product }}
+          <br>
+
+          <p>
+            your product is {{ order.product }} in the quantity of {{ order.quantity }}.
+            the status of this product is
+            <strong [ngClass]="getStatusClass(order.status)">
+              {{ order.status }}
+            </strong>
+          </p>
+        </mat-card-content>
+
+        <mat-card-actions class="d-flex justify-content-between">
+          <button mat-raised-button color="primary"
+            (click)="status('Pending', order.id)">
+            Pending
+          </button>
+
+          <button mat-raised-button color="warn"
+            (click)="status('Cancelled', order.id)">
+            Cancelled
+          </button>
+
+          <button mat-raised-button color="accent"
+            (click)="status('Delivered', order.id)">
+            Delivered
+          </button>
+        </mat-card-actions>
+
+      </mat-card>
+    </div>
+  </div>

@@ -1,0 +1,79 @@
+
+<div class="container">
+    <div class="row">
+        <h2 class="alert alert-danger w-100 my-4">
+            summerise charectors pipe
+        </h2>
+        <div class="col-12">
+            <p class="alert alert-info w-100 p-4 m-0"><strong>summary of char: </strong>{{lorem | summaryCharMr :50 }}
+            </p>
+        </div>
+        <h2 class="alert alert-danger w-100 my-4">
+            summerise word pipe
+        </h2>
+        <div class="col-12">
+            <p class="alert alert-info w-100 p-4 m-0"><strong>summary of word: </strong>{{lorem | summaryWordMr :5 }}
+            </p>
+        </div>
+        <h2 class="alert alert-danger w-100 my-4">
+            FileSize Pipe Task
+        </h2>
+        <div class="col-12">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let data of data">
+               <p> <strong>{{data.fileName}} :</strong> {{data.size | filesizeMr}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2 class="alert alert-danger w-100 my-4">
+        Student Filter
+    </h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <input type="text" placeholder="search......." [(ngModel)]="searchVal" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <select name="filterVal" id="filterVal" [(ngModel)]="filterdVal" class="form-control" (change)="FormReset()">
+                    <option value="fname">Filter By First Name</option>
+                    <option value="lname">Filter By Last Name</option>
+                    <option value="contact">Filter By Contact</option>
+                    <option value="email">Filter By Email Adress</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="std$ | async as stdDataAsync">
+        <div class="col-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>sr.no</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let std of stdDataAsync | filterMr:searchVal:filterdVal; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{std.fname}}</td>
+                        <td>{{std.lname}}</td>
+                        <td>{{std.contact}}</td>
+                        <td>{{std.email}}</td>
+                        <td><mat-icon color="primary">edit</mat-icon></td>
+                        <td><mat-icon color="warn">delete</mat-icon></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

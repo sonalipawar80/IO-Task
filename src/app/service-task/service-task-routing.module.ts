@@ -6,6 +6,7 @@ import { ServFormComponent } from "./serv-form/serv-form.component";
 import { TodoserviceTaskComponent } from "./components/todoservice-task/todoservice-task.component";
 import { CricketerdashboardComponent } from "./cricketers-task/cricketerdashboard/cricketerdashboard.component";
 import { GallaryDashboardComponent } from "./Gallary-task/gallary-dashboard/gallary-dashboard.component";
+import { OrderDashboardComponent } from "./order-task/order-dashboard/order-dashboard.component";
 
 const route:Routes=[
 {
@@ -23,6 +24,9 @@ const route:Routes=[
 },{
     path:'cricket-task',
     component:CricketerdashboardComponent
+},{
+    path:'order-task',
+    component:OrderDashboardComponent
 }
 
 ]

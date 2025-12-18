@@ -11,6 +11,12 @@ import { SummaryWordPipe } from './Pipes/summary-word.pipe';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { MatButtonModule } from "@angular/material/button";
 import { FilesizePipe } from './Pipes/filesize.pipe';
+import { PipeMrDashboardComponent } from './components/pipe-mr-dashboard/pipe-mr-dashboard.component';
+import { SummaryCharMrPipe } from './pipes-mr/summary-char-mr.pipe';
+import { SummaryWordMrPipe } from './pipes-mr/summary-word-mr.pipe';
+import { FilterMrPipe } from './pipes-mr/filter-mr.pipe';
+import { FilesizeMrPipe } from './pipes-mr/filesize-mr.pipe';
+import { MaterialModule } from "src/app/material/material.module";
 
 @NgModule({
   declarations: [
@@ -19,14 +25,20 @@ import { FilesizePipe } from './Pipes/filesize.pipe';
     SummaryPipe,
     SummaryWordPipe,
     PostCardComponent,
-    FilesizePipe
+    FilesizePipe,
+    PipeMrDashboardComponent,
+    SummaryCharMrPipe,
+    SummaryWordMrPipe,
+    FilterMrPipe,
+    FilesizeMrPipe
   ],
   imports: [
     CommonModule,
     PipeTaskRoutingModule,
     HttpClientModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MaterialModule
 ]
 })
 export class PipeTaskModule { }

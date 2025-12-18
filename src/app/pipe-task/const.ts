@@ -13,3 +13,12 @@ export interface Ipost{
     "title": string,
     "body":string 
 }
+
+export interface IStdServ {
+  fname: string;
+  lname: string;
+  email: string;
+  contact: number;
+  id:string,
+  [key :string]:any;
+}

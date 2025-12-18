@@ -13,7 +13,10 @@ import { SharedModuleModule } from '../shared-module/shared-module.module';
 import { TodoserviceTaskComponent } from './components/todoservice-task/todoservice-task.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CricketerdashboardComponent } from './cricketers-task/cricketerdashboard/cricketerdashboard.component';
-import { GallaryDashboardComponent } from './Gallary-task/gallary-dashboard/gallary-dashboard.component'
+import { GallaryDashboardComponent } from './Gallary-task/gallary-dashboard/gallary-dashboard.component';
+import { OrderDashboardComponent } from './order-task/order-dashboard/order-dashboard.component';
+import { OrderCardComponent } from './order-task/order-card/order-card.component';
+import { A11yModule } from "@angular/cdk/a11y";
 
 @NgModule({
   declarations: [
@@ -21,20 +24,21 @@ import { GallaryDashboardComponent } from './Gallary-task/gallary-dashboard/gall
     ServFormComponent,
     TodoserviceTaskComponent,
     CricketerdashboardComponent,
-    GallaryDashboardComponent
+    GallaryDashboardComponent,
+    OrderDashboardComponent,
+    OrderCardComponent
   ],
   imports: [
     CommonModule,
     ServiceTaskRoutingModule,
     IOTaskModule,
-    ReactiveFormsModule,
     FormsModule,
     MaterialModule,
     SharedModuleModule,
     HttpClientModule,
-    ReactiveFormsModule
-    
-    
+    FormsModule,
+    ReactiveFormsModule,
+    A11yModule
 ]
 })
 export class ServiceTaskModule{ 

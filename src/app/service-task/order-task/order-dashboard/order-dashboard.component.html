@@ -1,0 +1,58 @@
+<h2 class="button text-center py-3">Product Status ViewPort</h2>
+
+<div class="container">
+    <div class="row">
+
+
+        <div class="col-md-8 offset-md-2 my-4">
+            <h2 class="button text-center py-3">Product status Form </h2>
+            <div class="card">
+                <div class="card-body border ">
+                    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group " >
+                            <label for="customer"> Customer Name <span class="text-danger">*</span></label>
+                            <input type="text" #customer class="form-control" formControlName="customer">
+                        </div>
+                        <strong class="text-danger" *ngIf="orderForm.get('customer')?.touched && orderForm.get('customer')?.invalid">
+                            Customer Name is required.
+                        </strong>
+
+                        <div class="form-group">
+                            <label for="product"> Product Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" #product formControlName="product">
+                        </div>
+                         <strong class="text-danger" *ngIf="orderForm.get('product')?.touched && orderForm.get('product')?.invalid">
+                            Product Name is required.
+                        </strong>
+
+                        <div class="form-group">
+                            <label for="quantity"> Quantity</label>
+                            <select name="quantity" id="quantity" class="form-control" formControlName="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select name="status" id="status" class="form-control" formControlName="status">
+                                <option value="Pending">Pending</option>
+                                <option value="Delivered">Delivered</option>
+                                <option value="Cancelled">Cancelled</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" mat-raised-button color="primary">{{isEditMode ?'Update Order':' Add Ordered Product'}}</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="button text-center py-3">Product Status List</h2>
+
+    <app-order-card [orderdData]="orderdData"></app-order-card>
+</div>

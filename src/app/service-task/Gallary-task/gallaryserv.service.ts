@@ -20,5 +20,12 @@ export class GallaryservService {
   postGalleryData(newData:Igallery){
     return this._http.post(this.BASE_URL,newData)
   }
+
+  updateGalleryData(id:number,newData:Igallery){
+    return this._http.patch(`${this.BASE_URL}/${id}`,newData)
+  }
   
+  deleteGallary(id:number){
+    return this._http.delete(`${this.BASE_URL}/${id}`)
+  }
 }

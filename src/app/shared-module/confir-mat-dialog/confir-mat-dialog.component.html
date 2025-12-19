@@ -1,7 +1,10 @@
 <div class="card">
     <div class="card-body">
         <h2>{{msg}}</h2>
-        <button mat-raised-button color="primary" (click)="onclick(false)">Cancle</button>
-        <button mat-raised-button color="warn" (click)="onclick(true)">Confirm</button>
+        
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+        <button class="btn btn-primary"   (click)="onclick(false)">Cancle</button>
+        <button class="btn btn-danger" (click)="onclick(true)">Confirm</button>
     </div>
 </div>

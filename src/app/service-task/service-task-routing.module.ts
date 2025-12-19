@@ -27,6 +27,9 @@ const route:Routes=[
 },{
     path:'order-task',
     component:OrderDashboardComponent
+},{
+    path:'order-task',
+    component:OrderDashboardComponent
 }
 
 ]

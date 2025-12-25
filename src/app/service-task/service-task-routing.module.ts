@@ -7,6 +7,7 @@ import { TodoserviceTaskComponent } from "./components/todoservice-task/todoserv
 import { CricketerdashboardComponent } from "./cricketers-task/cricketerdashboard/cricketerdashboard.component";
 import { GallaryDashboardComponent } from "./Gallary-task/gallary-dashboard/gallary-dashboard.component";
 import { OrderDashboardComponent } from "./order-task/order-dashboard/order-dashboard.component";
+import { TaskDashboardComponent } from "./task-manager-task/task-dashboard/task-dashboard.component";
 
 const route:Routes=[
 {
@@ -30,6 +31,12 @@ const route:Routes=[
 },{
     path:'order-task',
     component:OrderDashboardComponent
+},{
+    path:'todo-task',
+    component:TodoserviceTaskComponent
+},{
+    path:'task-manager',
+    component:TaskDashboardComponent
 }
 
 ]

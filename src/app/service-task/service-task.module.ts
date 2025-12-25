@@ -17,6 +17,11 @@ import { GallaryDashboardComponent } from './Gallary-task/gallary-dashboard/gall
 import { OrderDashboardComponent } from './order-task/order-dashboard/order-dashboard.component';
 import { OrderCardComponent } from './order-task/order-card/order-card.component';
 import { A11yModule } from "@angular/cdk/a11y";
+import { TaskDashboardComponent } from './task-manager-task/task-dashboard/task-dashboard.component';
+import { TaskFormComponent } from './task-manager-task/task-form/task-form.component';
+import { TaskListComponent } from './task-manager-task/task-list/task-list.component';
+import { MiniCardComponent } from './task-manager-task/mini-card/mini-card.component';
+import { TaskNavComponent } from './task-manager-task/task-nav/task-nav.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { A11yModule } from "@angular/cdk/a11y";
     CricketerdashboardComponent,
     GallaryDashboardComponent,
     OrderDashboardComponent,
-    OrderCardComponent
+    OrderCardComponent,
+    TaskDashboardComponent,
+    TaskFormComponent,
+    TaskListComponent,
+    MiniCardComponent,
+    TaskNavComponent
   ],
   imports: [
     CommonModule,

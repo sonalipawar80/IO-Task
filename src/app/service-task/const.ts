@@ -8,7 +8,8 @@ export interface IStdServ {
 
 export interface Itodo {
     id: string,
-    title: string
+    title: string,
+    completed:boolean
 }
 
 export interface Player {
@@ -48,5 +49,13 @@ export interface IProduct {
   name: string;
   price: number;
   category: string;
+}
+
+export interface Itask{
+    id:number;
+    title:string;
+    dueDate:Date;
+    priority: 'High' | 'Medium'|'Low';
+    status:'Pending'|'In Progress' |'Completed';
 }
 

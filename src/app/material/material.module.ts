@@ -16,6 +16,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSortModule } from '@angular/material/sort';
 
 let material=[
   CommonModule,
@@ -34,7 +35,8 @@ let material=[
     MatTableModule,
     MatChipsModule,
     MatToolbarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSortModule
 ]
 @NgModule({
   declarations: [],

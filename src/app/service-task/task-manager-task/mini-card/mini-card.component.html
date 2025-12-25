@@ -1,0 +1,14 @@
+<div class="row p-4">
+    <div class="col-md-4 " *ngFor="let datu of summary">
+        <div class="card text-center listStyle">
+            <div class="card-header textCss"
+            [ngClass]="{ 'text-danger':datu.title==='Pending','text-primary':datu.title==='Completed','text-warning':datu.title==='In Progress'}">
+                {{datu.title}}
+            </div>
+            <div class="card-body ">
+                {{datu.count}}
+            </div>
+        </div>
+
+    </div>
+</div>

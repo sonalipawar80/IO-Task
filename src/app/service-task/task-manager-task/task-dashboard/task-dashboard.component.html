@@ -1,0 +1,14 @@
+<app-task-nav></app-task-nav>
+<div class="container-fluid listStyle">
+    <div class="row">
+        <div class="col-lg-12 my-4 text-center">
+            <button mat-raised-button class="button" (click)="onAddTask()" type="button">Add task</button>
+        </div>
+        <div class="col-lg-12 my-4">
+            <app-mini-card [summary]="summaryData"></app-mini-card>
+        </div>
+    </div>
+</div>
+ <div class="listStyle">
+    <app-task-list [taskData]="totalTaskData"></app-task-list>
+ </div>
